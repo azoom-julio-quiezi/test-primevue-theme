@@ -30,7 +30,7 @@ Before you begin, make sure you have the following installed on your computer:
 
 4. **Start the Development Server**
    ```bash
-   pnpm dev
+   pnpm run dev
    ```
 
 5. **Open Your Browser**
@@ -80,10 +80,10 @@ The demo page showcases various components:
 
 | Command | Description |
 |---------|-------------|
-| `pnpm dev` | Start development server |
-| `pnpm build` | Build for production |
-| `pnpm preview` | Preview production build |
-| `pnpm generate` | Generate static site |
+| `pnpm run dev` | Start development server |
+| `pnpm run build` | Build for production |
+| `pnpm run preview` | Preview production build |
+| `pnpm run generate` | Generate static site |
 
 ## 📁 Project Structure
 
