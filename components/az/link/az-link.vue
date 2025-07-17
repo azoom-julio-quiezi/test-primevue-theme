@@ -11,7 +11,7 @@
     :title="title"
     :aria-label="ariaLabel"
     :aria-describedby="ariaDescribedby"
-    class="p-link"
+    class="p-az-link"
     :class="[
       {
         'p-disabled': disabled,
@@ -23,7 +23,7 @@
     v-if="!useHtmlAnchor">
     {{ label }}
     <slot name="icon">
-      <svg class="p-link-icon"
+      <svg class="p-az-link-icon"
         width="21"
         height="20"
         viewBox="0 0 21 20"
@@ -39,7 +39,7 @@
     </slot>
   </nuxt-link>
 
-  <a class="p-link"
+  <a class="p-az-link"
     :href="href"
     :target="external ? '_blank' : undefined"
     :rel="external ? 'noopener noreferrer' : undefined"
@@ -63,7 +63,7 @@
     v-else>
     {{ label }}
     <slot name="icon">
-      <svg class="p-link-icon"
+      <svg class="p-az-link-icon"
         width="21"
         height="20"
         viewBox="0 0 21 20"
@@ -193,7 +193,7 @@ const useHtmlAnchor = computed(() => {
 </script>
 
 <style>
-.p-link {
+.p-az-link {
   font-size: 1rem;
   font-weight: 400;
   display: inline-flex;
@@ -202,11 +202,11 @@ const useHtmlAnchor = computed(() => {
   text-underline-offset: 5px;
 }
 
-.p-link:hover {
+.p-az-link:hover {
   text-decoration-thickness: 2px;
 }
 
-.p-link:focus-visible {
+.p-az-link:focus-visible {
   outline-offset: 4px;
   border-radius: 4px;
   outline: 1px solid var(--p-primary-color);
@@ -237,7 +237,7 @@ const useHtmlAnchor = computed(() => {
   outline: 1px solid var(--p-fuchsia-950);
 }
 
-.p-az-link-traditional:visited .p-link-icon {
+.p-az-link-traditional:visited .p-az-link-icon {
   color: var(--p-fuchsia-950);
 }
 
@@ -248,11 +248,11 @@ const useHtmlAnchor = computed(() => {
   outline: 1px solid #ffffff;
 }
 
-.p-link.p-disabled {
+.p-az-link.p-disabled {
   opacity: var(--p-disabled-opacity);
 }
 
-.p-link-icon {
+.p-az-link-icon {
   width: 1rem;
   height: 1rem;
   color: currentColor;
