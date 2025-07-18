@@ -9,12 +9,12 @@
         <h2>Breadcrumb Component</h2>
         <div class="demo-item">
           <h3>Basic Breadcrumb</h3>
-          <az-breadcrumb :model="breadcrumbItems" />
+          <v-breadcrumb :model="breadcrumbItems" />
         </div>
         
         <div class="demo-item">
           <h3>Custom Home Breadcrumb</h3>
-          <az-breadcrumb 
+          <v-breadcrumb 
             :home="{ label: 'Dashboard', url: '/dashboard' }"
             :model="breadcrumbItems" />
         </div>
@@ -26,21 +26,21 @@
         <div class="demo-item">
           <h3>Basic Labels</h3>
           <div class="label-demo">
-            <az-label label="Basic Label" />
-            <az-label label="Required Label" required />
-            <az-label label="Required with Text" required variant="text" />
-            <az-label label="Large Label" size="lg" />
-            <az-label label="Small Label" size="sm" />
+            <v-label label="Basic Label" />
+            <v-label label="Required Label" required />
+            <v-label label="Required with Text" required variant="text" />
+            <v-label label="Large Label" size="lg" />
+            <v-label label="Small Label" size="sm" />
           </div>
         </div>
         
         <div class="demo-item">
           <h3>Labels with Form Elements</h3>
           <div class="form-demo">
-            <az-label label="Email Address" html-for="email" required />
+            <v-label label="Email Address" html-for="email" required />
             <input type="email" id="email" placeholder="Enter your email" />
             
-            <az-label label="Phone Number" html-for="phone" />
+            <v-label label="Phone Number" html-for="phone" />
             <input type="tel" id="phone" placeholder="Enter your phone" />
           </div>
         </div>
@@ -52,12 +52,12 @@
         <div class="demo-item">
           <h3>Link Variants</h3>
           <div class="link-demo">
-            <az-link label="Primary Link" href="/primary" semantic-color="primary" />
-            <az-link label="Text Link" href="/text" semantic-color="text" />
-            <az-link label="Traditional Link" href="/traditional" semantic-color="traditional" />
-            <az-link label="External Link" href="https://example.com" external />
-            <az-link label="Small Link" href="/small" size="sm" />
-            <az-link label="Large Link" href="/large" size="lg" />
+            <v-link label="Primary Link" href="/primary" semantic-color="primary" />
+            <v-link label="Text Link" href="/text" semantic-color="text" />
+            <v-link label="Traditional Link" href="/traditional" semantic-color="traditional" />
+            <v-link label="External Link" href="https://example.com" external />
+            <v-link label="Small Link" href="/small" size="sm" />
+            <v-link label="Large Link" href="/large" size="lg" />
           </div>
         </div>
       </section>
@@ -99,10 +99,26 @@
         <div class="demo-item">
           <h3>Button with Icons</h3>
           <div class="button-demo">
-            <v-button label="Save" icon="pi pi-check" />
-            <v-button label="Delete" icon="pi pi-trash" severity="danger" />
-            <v-button icon="pi pi-heart" text />
-            <v-button icon="pi pi-star" outlined />
+            <v-button label="Save">
+              <template #icon>
+                <az-icon name="file-save" size="16" />
+              </template>
+            </v-button>
+            <v-button label="Delete" severity="danger">
+              <template #icon>
+                <az-icon name="delete" size="16" />
+              </template>
+            </v-button>
+            <v-button text>
+              <template #icon>
+                <az-icon name="heart" size="16" />
+              </template>
+            </v-button>
+            <v-button outlined>
+              <template #icon>
+                <az-icon name="star" size="16" />
+              </template>
+            </v-button>
           </div>
         </div>
       </section>
@@ -113,7 +129,7 @@
         <div class="demo-item">
           <h3>Basic InputNumber</h3>
           <div class="input-demo">
-            <az-label label="Basic Number Input" html-for="basic-number" />
+            <v-label label="Basic Number Input" html-for="basic-number" />
             <v-input-number id="basic-number" v-model="basicNumber" />
           </div>
         </div>
@@ -121,7 +137,7 @@
         <div class="demo-item">
           <h3>InputNumber with Formatting</h3>
           <div class="input-demo">
-            <az-label label="Currency Input" html-for="currency-number" />
+            <v-label label="Currency Input" html-for="currency-number" />
             <v-input-number 
               id="currency-number" 
               v-model="currencyNumber" 
@@ -134,7 +150,7 @@
         <div class="demo-item">
           <h3>InputNumber with Min/Max</h3>
           <div class="input-demo">
-            <az-label label="Limited Range" html-for="range-number" />
+            <v-label label="Limited Range" html-for="range-number" />
             <v-input-number 
               id="range-number" 
               v-model="rangeNumber" 
@@ -147,7 +163,7 @@
         <div class="demo-item">
           <h3>InputNumber with Suffix</h3>
           <div class="input-demo">
-            <az-label label="Percentage Input" html-for="percent-number" />
+            <v-label label="Percentage Input" html-for="percent-number" />
             <v-input-number 
               id="percent-number" 
               v-model="percentNumber" 
@@ -165,7 +181,7 @@
           <h3>Basic Dialog</h3>
           <v-button label="Open Basic Dialog" @click="showBasicDialog = true" />
           
-          <az-dialog 
+          <v-dialog 
             v-model:visible="showBasicDialog" 
             header="Basic Dialog" 
             modal>
@@ -173,33 +189,33 @@
             <template #footer>
               <v-button label="Close" @click="showBasicDialog = false" />
             </template>
-          </az-dialog>
+          </v-dialog>
         </div>
         
         <div class="demo-item">
           <h3>Form Dialog</h3>
           <v-button label="Open Form Dialog" @click="showFormDialog = true" />
           
-          <az-dialog 
+          <v-dialog 
             v-model:visible="showFormDialog" 
             header="User Information" 
             modal 
             :style="{ width: '50rem' }">
             <div class="form-dialog">
-              <az-label label="Name" html-for="dialog-name" required />
+              <v-label label="Name" html-for="dialog-name" required />
               <input type="text" id="dialog-name" v-model="formData.name" placeholder="Enter your name" />
               
-              <az-label label="Email" html-for="dialog-email" required />
+              <v-label label="Email" html-for="dialog-email" required />
               <input type="email" id="dialog-email" v-model="formData.email" placeholder="Enter your email" />
               
-              <az-label label="Age" html-for="dialog-age" />
+              <v-label label="Age" html-for="dialog-age" />
               <v-input-number id="dialog-age" v-model="formData.age" :min="0" :max="120" />
             </div>
             <template #footer>
               <v-button label="Cancel" severity="secondary" @click="showFormDialog = false" />
               <v-button label="Save" @click="saveForm" />
             </template>
-          </az-dialog>
+          </v-dialog>
         </div>
       </section>
 
@@ -223,10 +239,10 @@
         <div class="demo-item">
           <h3>Complete Form Example</h3>
           <div class="interactive-form">
-            <az-label label="Product Name" html-for="product-name" required />
+            <v-label label="Product Name" html-for="product-name" required />
             <input type="text" id="product-name" v-model="productForm.name" placeholder="Enter product name" />
             
-            <az-label label="Price" html-for="product-price" required />
+            <v-label label="Price" html-for="product-price" required />
             <v-input-number 
               id="product-price" 
               v-model="productForm.price" 
@@ -234,7 +250,7 @@
               currency="USD" 
               locale="en-US" />
             
-            <az-label label="Quantity" html-for="product-quantity" />
+            <v-label label="Quantity" html-for="product-quantity" />
             <v-input-number 
               id="product-quantity" 
               v-model="productForm.quantity" 
@@ -248,16 +264,40 @@
           </div>
         </div>
       </section>
+
+      <!-- Japanese Font Demo Section -->
+      <section class="demo-section">
+        <h2>Japanese Font Demonstration</h2>
+        <div class="demo-item">
+          <h3>Japanese Text Examples</h3>
+          <div class="japanese-demo">
+            <div class="japanese-text">
+              <h4>Japanese with parentheses and brackets</h4>
+              <p class="japanese-example">（テスト）「テスト」［テスト］</p>
+            </div>
+            
+            <div class="japanese-text">
+              <h4>Japanese with punctuation</h4>
+              <p class="japanese-example">テスト、テスト。テスト</p>
+            </div>
+            
+            <div class="japanese-text">
+              <h4>Mixed Japanese and English with half-width characters and full-width characters</h4>
+              <p class="japanese-example">English(半角)日本語（全角）</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- Global Confirm Dialog -->
-    <az-confirm-dialog />
+    <v-confirm-dialog />
   </div>
 </template>
 
 <script setup>
 import { ref, reactive } from 'vue'
-import { useAzConfirmDialog } from '~/composables/use-az-confirm-dialog'
+import { useConfirm } from 'primevue/useconfirm'
 
 // Breadcrumb data
 const breadcrumbItems = ref([
@@ -289,14 +329,20 @@ const currencyNumber = ref(0)
 const rangeNumber = ref(50)
 const percentNumber = ref(25)
 
-// Confirm dialog
-const { showConfirm } = useAzConfirmDialog()
+// Confirm dialog - using PrimeVue's native useConfirm
+const confirm = useConfirm()
 
 const showBasicConfirm = () => {
-  showConfirm({
+  confirm.require({
     header: 'Basic Confirmation',
     message: 'Are you sure you want to proceed?',
-    icon: 'question',
+    icon: 'help',
+    iconProps: {
+      type: 'tight',
+      size: 24,
+      color: 'blue',
+      bounded: 'tight'
+    },
     accept: () => {
       console.log('User accepted')
     },
@@ -307,10 +353,14 @@ const showBasicConfirm = () => {
 }
 
 const showDeleteConfirm = () => {
-  showConfirm({
+  confirm.require({
     header: 'Delete Confirmation',
     message: 'This action cannot be undone. Are you sure you want to delete this item?',
     icon: 'warning',
+    iconProps: {
+      type: 'filled',
+      size: 20
+    },
     acceptLabel: 'Delete',
     rejectLabel: 'Cancel',
     acceptProps: {
@@ -323,13 +373,13 @@ const showDeleteConfirm = () => {
 }
 
 const showInfoConfirm = () => {
-  showConfirm({
+  confirm.require({
     header: 'Information',
     message: 'This is an informational message with custom styling.',
     icon: 'info',
     iconProps: {
       type: 'filled',
-      size: 20
+      size: 24
     },
     acceptLabel: 'Got it',
     rejectLabel: 'Dismiss',
@@ -340,10 +390,14 @@ const showInfoConfirm = () => {
 }
 
 const showSuccessConfirm = () => {
-  showConfirm({
+  confirm.require({
     header: 'Success',
     message: 'Operation completed successfully!',
     icon: 'check',
+    iconProps: {
+      type: 'filled',
+      size: 20
+    },
     acceptLabel: 'Continue',
     rejectLabel: 'Close',
     acceptProps: {
@@ -360,10 +414,14 @@ const saveForm = () => {
 
 const saveProduct = () => {
   console.log('Product data:', productForm)
-  showConfirm({
+  confirm.require({
     header: 'Save Product',
     message: 'Are you sure you want to save this product?',
-    icon: 'question',
+    icon: 'help',
+    iconProps: {
+      type: 'outline',
+      size: 20
+    },
     accept: () => {
       console.log('Product saved')
     }
@@ -535,6 +593,34 @@ h1 {
   display: flex;
   gap: 0.75rem;
   margin-top: 1rem;
+}
+
+.japanese-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.japanese-text {
+  padding: 1rem;
+  border: 1px solid var(--p-surface-200);
+  border-radius: 0.5rem;
+  background: var(--p-surface-0);
+}
+
+.japanese-text h4 {
+  color: var(--p-surface-700);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.japanese-example {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--p-surface-900);
+  margin: 0;
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 /* Dark mode support */
