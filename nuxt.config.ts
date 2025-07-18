@@ -4,11 +4,11 @@ import Aura from '@primeuix/themes/aura'
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  css: ['@/assets/styles/main.css'],
   modules: [
     '@primevue/nuxt-module',
     '@azoom/az-icons',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@azoom/primevue-theme-generator/nuxt',
   ],
   primevue: {
     autoImport: false,
