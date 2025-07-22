@@ -298,6 +298,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { useConfirm } from 'primevue/useconfirm'
+import ConfirmDialog from 'primevue/confirmdialog'
 
 // Breadcrumb data
 const breadcrumbItems = ref([

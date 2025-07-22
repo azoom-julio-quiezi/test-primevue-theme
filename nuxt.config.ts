@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
     '@azoom/az-icons',
     '@nuxtjs/google-fonts',
-    '@azoom/primevue-theme-generator/nuxt',
+    '@azoom/az-ui/nuxt',
   ],
   primevue: {
     autoImport: false,

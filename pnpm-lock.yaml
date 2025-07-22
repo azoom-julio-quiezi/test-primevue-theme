@@ -11,9 +11,9 @@ importers:
       '@azoom/az-icons':
         specifier: ^0.1.7
         version: 0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))
-      '@azoom/primevue-theme-generator':
+      '@azoom/az-ui':
         specifier: github:azoom-julio-quiezi/PrimeVueThemeGenerator
-        version: https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/42f58f8020b3fcec79aff85920f59f3342be4283(@azoom/az-icons@0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)))(@primeuix/themes@1.2.1)(@primevue/nuxt-module@4.3.6(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3)))(nuxt@3.17.6(@parcel/watcher@2.5.1)(@types/node@24.0.13)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(eslint@9.30.1(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0))(primevue@4.3.6(vue@3.5.17(typescript@5.8.3)))(sass@1.89.2)(vue@3.5.17(typescript@5.8.3))
+        version: https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/c1f19a8b4db11caf59e858786901a14906e8337e(@azoom/az-icons@0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)))(@primeuix/themes@1.2.1)(@primevue/nuxt-module@4.3.6(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3)))(nuxt@3.17.6(@parcel/watcher@2.5.1)(@types/node@24.0.13)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(eslint@9.30.1(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0))(primevue@4.3.6(vue@3.5.17(typescript@5.8.3)))(sass@1.89.2)(vue@3.5.17(typescript@5.8.3))
       '@primeuix/themes':
         specifier: ^1.2.1
         version: 1.2.1
@@ -106,11 +106,8 @@ packages:
       vue:
         optional: true
 
-  '@azoom/eslint-config@0.4.2':
-    resolution: {integrity: sha512-lCgHmXFBjQ5icQjxwmXqua8eDwHljRZadTWR/hb520b9hdxnOzTVNaPZ3ULBpVHfkQx3kHGQSD7VHacc6IAYlA==, tarball: https://npm.pkg.github.com/download/@azoom/eslint-config/0.4.2/a66d8876fe8ef59737c4be74dc2819e524a561a2}
-
-  '@azoom/primevue-theme-generator@https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/42f58f8020b3fcec79aff85920f59f3342be4283':
-    resolution: {tarball: https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/42f58f8020b3fcec79aff85920f59f3342be4283}
+  '@azoom/az-ui@https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/c1f19a8b4db11caf59e858786901a14906e8337e':
+    resolution: {tarball: https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/c1f19a8b4db11caf59e858786901a14906e8337e}
     version: 1.0.0
     hasBin: true
     peerDependencies:
@@ -124,6 +121,9 @@ packages:
     peerDependenciesMeta:
       nuxt:
         optional: true
+
+  '@azoom/eslint-config@0.4.2':
+    resolution: {integrity: sha512-lCgHmXFBjQ5icQjxwmXqua8eDwHljRZadTWR/hb520b9hdxnOzTVNaPZ3ULBpVHfkQx3kHGQSD7VHacc6IAYlA==, tarball: https://npm.pkg.github.com/download/@azoom/eslint-config/0.4.2/a66d8876fe8ef59737c4be74dc2819e524a561a2}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -4917,6 +4917,18 @@ snapshots:
       - typescript
       - vitest
 
+  '@azoom/az-ui@https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/c1f19a8b4db11caf59e858786901a14906e8337e(@azoom/az-icons@0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)))(@primeuix/themes@1.2.1)(@primevue/nuxt-module@4.3.6(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3)))(nuxt@3.17.6(@parcel/watcher@2.5.1)(@types/node@24.0.13)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(eslint@9.30.1(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0))(primevue@4.3.6(vue@3.5.17(typescript@5.8.3)))(sass@1.89.2)(vue@3.5.17(typescript@5.8.3))':
+    dependencies:
+      '@azoom/az-icons': 0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))
+      '@primeuix/themes': 1.2.1
+      '@primevue/nuxt-module': 4.3.6(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3))
+      commander: 13.1.0
+      primevue: 4.3.6(vue@3.5.17(typescript@5.8.3))
+      sass: 1.89.2
+      vue: 3.5.17(typescript@5.8.3)
+    optionalDependencies:
+      nuxt: 3.17.6(@parcel/watcher@2.5.1)(@types/node@24.0.13)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(eslint@9.30.1(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0)
+
   '@azoom/eslint-config@0.4.2(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@antfu/eslint-config': 2.27.3(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint-plugin-format@0.1.3(eslint@9.30.1(jiti@2.4.2)))(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3)
@@ -4944,18 +4956,6 @@ snapshots:
       - svelte-eslint-parser
       - typescript
       - vitest
-
-  '@azoom/primevue-theme-generator@https://codeload.github.com/azoom-julio-quiezi/PrimeVueThemeGenerator/tar.gz/42f58f8020b3fcec79aff85920f59f3342be4283(@azoom/az-icons@0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3)))(@primeuix/themes@1.2.1)(@primevue/nuxt-module@4.3.6(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3)))(nuxt@3.17.6(@parcel/watcher@2.5.1)(@types/node@24.0.13)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(eslint@9.30.1(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0))(primevue@4.3.6(vue@3.5.17(typescript@5.8.3)))(sass@1.89.2)(vue@3.5.17(typescript@5.8.3))':
-    dependencies:
-      '@azoom/az-icons': 0.1.7(@typescript-eslint/utils@8.36.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.17)(eslint@9.30.1(jiti@2.4.2))(magicast@0.3.5)(typescript@5.8.3)(vue@3.5.17(typescript@5.8.3))
-      '@primeuix/themes': 1.2.1
-      '@primevue/nuxt-module': 4.3.6(@babel/parser@7.28.0)(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3))
-      commander: 13.1.0
-      primevue: 4.3.6(vue@3.5.17(typescript@5.8.3))
-      sass: 1.89.2
-      vue: 3.5.17(typescript@5.8.3)
-    optionalDependencies:
-      nuxt: 3.17.6(@parcel/watcher@2.5.1)(@types/node@24.0.13)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(eslint@9.30.1(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.44.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.13)(jiti@2.4.2)(sass-embedded@1.89.2)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0)
 
   '@babel/code-frame@7.27.1':
     dependencies:
