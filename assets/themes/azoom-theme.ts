@@ -1,6 +1,6 @@
 import { definePreset } from '@primeuix/themes'
 import Aura from '@primeuix/themes/aura'
-import { button } from '@azoom/az-ui/runtime'
+import { button } from '@azoom/az-ui/themes'
 
 const Default = definePreset(Aura, {
   semantic: {
