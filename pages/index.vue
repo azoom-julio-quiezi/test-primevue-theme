@@ -298,6 +298,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { useConfirm } from 'primevue/useconfirm'
+import ConfirmDialog from 'primevue/confirmdialog'
 
 // Breadcrumb data
 const breadcrumbItems = ref([
@@ -448,14 +449,14 @@ const resetProductForm = () => {
 }
 
 h1 {
-  color: var(--p-surface-900);
+  color: var(--p-text-color);
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
 .description {
-  color: var(--p-surface-600);
+  color: var(--p-text-color);
   font-size: 1.125rem;
   margin-bottom: 3rem;
 }
@@ -469,7 +470,7 @@ h1 {
 }
 
 .demo-section h2 {
-  color: var(--p-surface-900);
+  color: var(--p-text-color);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -482,7 +483,6 @@ h1 {
   padding: 1.5rem;
   border: 1px solid var(--p-surface-200);
   border-radius: 0.5rem;
-  background: var(--p-surface-50);
 }
 
 .demo-item:last-child {
@@ -490,7 +490,7 @@ h1 {
 }
 
 .demo-item h3 {
-  color: var(--p-surface-800);
+  color: var(--p-text-color);
   margin-bottom: 1rem;
   font-size: 1.125rem;
   font-weight: 600;
@@ -609,7 +609,7 @@ h1 {
 }
 
 .japanese-text h4 {
-  color: var(--p-surface-700);
+  color: var(--p-text-color);
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -618,7 +618,7 @@ h1 {
 .japanese-example {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--p-surface-900);
+  color: var(--p-text-color);
   margin: 0;
   font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
 }
@@ -634,7 +634,6 @@ h1 {
 }
 
 :root[class='p-dark'] .demo-item {
-  background: var(--p-surface-700);
   border-color: var(--p-surface-600);
 }
 
@@ -643,7 +642,7 @@ h1 {
 :root[class='p-dark'] .interactive-form input {
   background: var(--p-surface-600);
   border-color: var(--p-surface-500);
-  color: var(--p-surface-0);
+  color: var(--p-text-color);
 }
 
 :root[class='p-dark'] .form-demo input:focus,
